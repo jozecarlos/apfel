@@ -1,0 +1,4 @@
+izze_hoo:
+    resource: "@IzzeHooBundle/Resources/config/routing.yml"
+    prefix:   /
+

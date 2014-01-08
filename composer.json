@@ -36,7 +36,8 @@
         "twbs/bootstrap": "v3.0.0",
         "jquery/jquery":  "1.10.*",
         "leafo/lessphp": "0.4.0",
-        "twitter/bootstrap": "v3.0.0"
+        "twitter/bootstrap": "v3.0.0",
+        "doctrine/doctrine-fixtures-bundle": "dev-master"
 
     },
     "scripts": {

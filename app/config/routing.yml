@@ -1,4 +1,13 @@
+izze_user:
+    resource: "@IzzeUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 izze_hoo:
     resource: "@IzzeHooBundle/Resources/config/routing.yml"
     prefix:   /
+login:
+    path:   /login
+    defaults:  { _controller: IzzeSecurityBundle:Security:login }
+login_check:
+    path:   /login_check
 

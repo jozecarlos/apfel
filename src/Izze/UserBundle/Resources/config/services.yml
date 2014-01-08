@@ -1,0 +1,7 @@
+parameters:
+#    izze_user.example.class: Izze\UserBundle\Example
+
+services:
+#    izze_user.example:
+#        class: %izze_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

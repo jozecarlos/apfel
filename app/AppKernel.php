@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
             new Izze\HooBundle\IzzeHooBundle(),
             new Izze\SecurityBundle\IzzeSecurityBundle(),
-           // new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Izze\UserBundle\IzzeUserBundle()
         );
 

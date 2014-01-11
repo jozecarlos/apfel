@@ -8,6 +8,10 @@ izze_hoo:
 login:
     path:   /login
     defaults:  { _controller: IzzeSecurityBundle:Security:login }
+
 login_check:
     path:   /login_check
+
+logout:
+    pattern: /logout
 

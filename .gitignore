@@ -11,3 +11,15 @@ web/bundles/*
 # Configuration files
 app/config/parameters.ini
 app/config/parameters.yml
+
+# IDE files to ignore
+nbproject/
+.idea/
+*.tmproj
+
+# generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out

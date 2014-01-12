@@ -1,3 +1,7 @@
 izze_hoo_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: IzzeHooBundle:Default:index }
+
+izze_hoo_categoria_apartamento:
+    resource: "@IzzeHooBundle/Resources/config/routing/categoriaapartamento.yml"
+    prefix:   /

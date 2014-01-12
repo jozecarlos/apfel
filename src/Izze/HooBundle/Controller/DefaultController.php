@@ -10,8 +10,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  */
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('IzzeHooBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('IzzeHooBundle:Default:index.html.twig');
     }
 }

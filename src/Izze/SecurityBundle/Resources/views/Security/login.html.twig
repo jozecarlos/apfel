@@ -1,20 +1,50 @@
 {# src/Izze/SecurityBundle/Resources/views/Security/login.html.twig #}
-{% if error %}
-    <div>{{ error.message }}</div>
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hoo Hotel Manager</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<form action="{{ path('login_check') }}" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type='text/css' />
+    <link rel="stylesheet" href="{{ asset('bundles/izzesecurity/css/unicorn-login.css') }}" type='text/css' />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-glyphicons.css') }}" />
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="_password" />
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="{{ asset('img/logo.png') }}" alt="" />
+    </div>
+    <div id="loginbox">
+        {% if error %}
+            <div>{{ error.message }}</div>
+        {% endif %}
+        <form id="loginform" action="{{ path('login_check') }}" method="post">
+            <p>Enter username and password to continue.</p>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" placeholder="Username" />
+            </div>
 
-    {#
-        If you want to control the URL the user
-        is redirected to on success (more details below)
-        <input type="hidden" name="_target_path" value="/account" />
-    #}
-
-    <button type="submit">login</button>
-</form>
+            {#
+                If you want to control the URL the user
+                is redirected to on success (more details below)
+                <input type="hidden" name="_target_path" value="/account" />
+            #}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input class="form-control" type="password" placeholder="Password" name="_password" />
+            </div>
+            <hr />
+            <div class="form-actions">
+                <br/>
+                <div class="pull-right"><input type="submit" class="btn btn-default" value="Login" /></div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('bundles/izzesecurity/js/unicorn.login.js') }}"></script>
+</body>
+</html>

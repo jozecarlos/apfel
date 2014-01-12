@@ -1,0 +1,74 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link  rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type='text/css' />
+    <link  rel="stylesheet" href="{{ asset('css/bootstrap-glyphicons.css') }}" type='text/css' />
+    <link  rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}" type='text/css' />
+    <link  rel="stylesheet" href="{{ asset('css/icheck/flat/blue.css') }}" type='text/css' />
+    <link  rel="stylesheet" href="{{ asset('css/select2.css') }}" type='text/css' />
+    <link  rel="stylesheet" href="{{ asset('css/unicorn.main.css') }}" type='text/css' />
+    <link  rel="stylesheet" href="{{ asset('css/unicorn.grey.css') }}" class="skin-color" />
+{%  endblock %}
+
+{% block javascritps %}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.custom.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.icheck.min.js') }}"></script>
+    <script src="{{ asset('js/select2.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.jpanelmenu.min.js') }}"></script>
+    <script src="{{ asset('js/unicorn.js') }}"></script>
+    <script src="{{ asset('js/unicorn.tables.js') }}"></script>
+{%  endblock %}
+
+ {% block title_page %}
+     <h1>Categoria Apartamento</h1>
+ {%  endblock %}
+
+{% block body -%}
+        <div class="widget-box">
+            <div class="widget-title">
+								<span class="icon">
+									<i class="glyphicon glyphicon-th"></i>
+								</span>
+                <h5>Categoria Apartamento</h5>
+            </div>
+            <div class="widget-content">
+                <table class="table table-bordered table-striped table-hover data-table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Action(s)</th>
+                        </tr>
+                    </thead>
+                  <tbody>
+        {% for entity in entities %}
+            <tr class="gradeA">
+                <td><a href="{{ path('categoria_apartamento_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nome }}</td>
+                <td class="center">
+                    <ul>
+                        <li>
+                            <a href="{{ path('categoria_apartamento_show', { 'id': entity.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('categoria_apartamento_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <ul>
+        <li>
+            <a href="{{ path('categoria_apartamento_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,30 @@
+categoria_apartamento:
+    pattern:  /categoria_apartamento
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:index" }
+
+categoria_apartamento_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:show" }
+
+categoria_apartamento_new:
+    pattern:  /new
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:new" }
+
+categoria_apartamento_create:
+    pattern:  /create
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:create" }
+    requirements: { _method: post }
+
+categoria_apartamento_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:edit" }
+
+categoria_apartamento_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:update" }
+    requirements: { _method: post|put }
+
+categoria_apartamento_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IzzeHooBundle:CategoriaApartamento:delete" }
+    requirements: { _method: post|delete }
